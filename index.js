@@ -12,11 +12,12 @@ if (!databaseUri) {
 }
 
 var api = new ParseServer({
-  databaseURI: databaseUri || 'mongodb://localhost:27017/dev',
+  databaseURI: databaseUri || 'mongodb://heroku_9c8w4t55:m3v2udp329ma1nsbt286hroior@ds035776.mlab.com:35776/heroku_9c8w4t55',
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
-  appId: process.env.APP_ID || 'myAppId',
-  masterKey: process.env.MASTER_KEY || '', //Add your master key here. Keep it secret!
+  appId: process.env.APP_ID || 'rKbHKQMIsG1OFBmphdrej3Sli2mZE7QBh4QEVZ8B',
+  masterKey: process.env.MASTER_KEY || 'IVlJWyBumDTBiIzO4XSXLnZpLvSCTDJiLJa3ApdP', //Add your master key here. Keep it secret!
   serverURL: process.env.SERVER_URL || 'http://localhost:1337/parse',  // Don't forget to change to https if needed
+  clientKey: process.env.CLIENT_KEY || '8DOZl9orYLrlPlbTwsrWw7QcrzwloNeZSzMpCApH',
   liveQuery: {
     classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions
   }
